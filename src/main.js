@@ -3,11 +3,11 @@
  * MIT License. See mit-license.txt for more info.
  */
 
-import Proxy from './proxy';
+import Proxy from './proxy'
 
 export default {
   Proxy: Proxy,
-  createServer: function (opts) {
-    return new Proxy(opts);
-  }
-};
+  createServer: function(opts) {
+    return new Proxy(opts)
+  },
+}

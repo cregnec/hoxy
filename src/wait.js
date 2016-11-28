@@ -5,10 +5,7 @@
 
 export default function wait(t) {
   return new Promise(res => {
-    if (t) {
-      setTimeout(res, t);
-    } else {
-      setImmediate(res);
-    }
-  });
+    if (t) { setTimeout(res, t) }
+    else { setImmediate(res) }
+  })
 }

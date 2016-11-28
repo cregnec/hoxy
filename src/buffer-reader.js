@@ -3,17 +3,17 @@
  * MIT License. See mit-license.txt for more info.
  */
 
-import BaseReader from './base-reader';
+import BaseReader from './base-reader'
 
 export default class BufferReader extends BaseReader {
 
   constructor(buffer) {
-    super();
-    this._buffer = buffer;
+    super()
+    this._buffer = buffer
   }
 
   toString(encoding) {
-    return this._buffer.toString(encoding);
+    return this._buffer.toString(encoding)
   }
 
   finalize() {

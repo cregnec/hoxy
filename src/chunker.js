@@ -6,12 +6,12 @@
 export default {
 
   chunksToString(chunks, encoding) {
-    encoding = encoding || 'utf8';
-    chunks = chunks.map(chunk => chunk.toString(encoding));
-    return chunks.join('');
+    encoding = encoding || 'utf8'
+    chunks = chunks.map(chunk => chunk.toString(encoding))
+    return chunks.join('')
   },
 
   stringToChunks(str, encoding) {
-    return [new Buffer(str, encoding || 'utf8')];
-  }
-};
+    return [new Buffer(str, encoding || 'utf8')]
+  },
+}

@@ -7,45 +7,45 @@ const levels = {
   debug: 100,
   info: 200,
   warn: 300,
-  error: 400
-};
+  error: 400,
+}
 
 export default class Logger {
 
   constructor(level) {
-    this._level = level;
+    this._level = level
   }
 
   log(level, message) {
     if (!levels.hasOwnProperty(level)) {
-      return;
+      return
     }
     if (levels[this._level] <= levels[level]) {
-      console.error(message);
+      console.error(message)
     }
   }
 
   debug(message) {
     if (levels[this._level] <= levels.debug) {
-      console.error(message);
+      console.error(message)
     }
   }
 
   info(message) {
     if (levels[this._level] <= levels.info) {
-      console.error(message);
+      console.error(message)
     }
   }
 
   warn(message) {
     if (levels[this._level] <= levels.warn) {
-      console.error(message);
+      console.error(message)
     }
   }
 
   error(message) {
     if (levels[this._level] <= levels.error) {
-      console.error(message);
+      console.error(message)
     }
   }
 }
