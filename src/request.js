@@ -162,6 +162,8 @@ export default class Request extends Body {
 
   _setHttpSource(inReq, reverse){
     let u = inReq.url
+    var originalHostname = inReq.headers.host.split(':')[0];
+
     if (reverse){
       u = url.resolve(reverse, u)
     }
@@ -200,6 +202,9 @@ export default class Request extends Body {
     this.url = purl.path
     inReq._isOriginal = true
     this._source = inReq
+    //dirty hack for virtual host: /etc/hosts musted be configured
+    this.hostname = originalHostname;
+    this.headers.host = originalHostname + ':' + port;
   }
 
   /**
